@@ -4,11 +4,13 @@
 
 #include <fstream>
 #include <iostream>
+#include "Cell.h"
+
  class Floor {
 
   const int height;
   const int width;
-  char **floor;
+  Cell **floor;
 
 public:
 
