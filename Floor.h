@@ -4,9 +4,7 @@
 
 #include <fstream>
 #include <iostream>
-#include <vector>
- class Floor
-{
+ class Floor {
 
   const int height;
   const int width;
