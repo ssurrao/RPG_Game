@@ -3,16 +3,17 @@
 #ifndef CELL_H
 #define CELL_H
 
-#include "Entity.h"
+//#include "Entity.h"
 
 class Cell {
-    const char originalFloor;
+    char originalFloor = '0';
+    //Entity *entity = nullptr;
 
 public:
     char getOriginalFloor();
-    Entity *entity;
+    void setOriginalFloor(char tile);
+    
 
-Cell (char originalFloor);
 };
 
 #endif
