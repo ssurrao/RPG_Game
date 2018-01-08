@@ -12,10 +12,6 @@ int Enemy::getColumn() {
     return this->column;
 }
 
-
-
-
-
 void Enemy::setLocation(int row, int column) {
     this->row = row;
     this->column = column;
@@ -25,13 +21,13 @@ Player* Enemy::getPlayer() {
     return pc;
 }
 
-int Enemy::getPlayerRow() {
+/*int Enemy::getPlayerRow() {
     return this->playerRow;
 }
 
 int Enemy::getPlayerColumn() {
     return this->playerColumn;
-}
+}*/
 
 
 void Enemy::setPlayerLocation(int row, int column) {
@@ -41,7 +37,11 @@ void Enemy::setPlayerLocation(int row, int column) {
 }
 
 void Enemy::update() {
-    setPlayerLocation(getPlayer()->getRow(), getPlayer()->getColumn());
+
+}
+
+bool Enemy::moveTo(Cell *cell) {
+    return true;
 }
 
 //Enemy::~Enemy() {

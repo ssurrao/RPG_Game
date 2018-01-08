@@ -1,5 +1,6 @@
 #include "Floor.h"
 
+
 using namespace std;
 
 //Constructor for Floor
@@ -17,6 +18,8 @@ Floor::Floor(const int height, const int width, ifstream& file): height(height),
             //not a pointer
             floor[z][s] = Cell();
             floor[z][s].setOriginalFloor(tile);
+            floor[z][s].setRow(z);
+            floor[z][s].setRow(s);
             //Add pointer Condition when entity pointer is added to cell
             if (floor[z][s].getOriginalFloor() == '.'){
                 spawnPointsVector.push_back(new SpawnPoints(s,z));
@@ -42,4 +45,11 @@ void Floor::setEntity(int row, int column, Entity* ent) {
     floor[row][column].setEntity(ent);
 }
 
+void Floor::setPC(Player *pc) {
+    this->pc = pc;
+}
+
+Cell* Floor::getCell(int row, int column) {
+    return &this->floor[row][column];
+}
 

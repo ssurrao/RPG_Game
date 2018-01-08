@@ -28,6 +28,17 @@ void Player::notify() {
         enemyList[i]->update();
 }
 
+bool Player::moveTo(Cell *cell) {
+    if(cell->getEntity() == nullptr && cell->getOriginalFloor() != '-' && cell->getOriginalFloor() != '|') {
+        cell->setEntity(this);
+        this->currentCell->setEntity(nullptr);
+        this->row = cell->getRow();
+        this->column = cell->getColumn();
+        this->currentCell = cell;
+        this->updateNeighbours();
+    }
+
+}
 
 //Player::~Player() {
 //    delete this;
