@@ -7,10 +7,15 @@
 
 
 
-
+//Abstract class
 class Entity {
+public:
+    virtual ~Entity();
 	
 };
+
+
+
 
 
 #endif //RPG_GAME_ENTITY_H
