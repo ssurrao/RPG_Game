@@ -17,7 +17,10 @@ Floor::Floor(const int height, const int width, ifstream& file): height(height),
             //not a pointer
             floor[z][s] = Cell();
             floor[z][s].setOriginalFloor(tile);
-
+            //Add pointer Condition when entity pointer is added to cell
+            if (floor[z][s].getOriginalFloor() == '.'){
+                spawnPointsVector.push_back(new SpawnPoints(s,z));
+            }
         }
     }
 }
