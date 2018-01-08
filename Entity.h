@@ -1,14 +1,6 @@
 #ifndef ENTITY_H
 #define ENTITY_H
 
-class Entity {
-	
-
-
-public:
-
-
-
 
 //Abstract class
 class Entity {
@@ -16,11 +8,6 @@ class Entity {
 
 
 };
-
-
-
-
-#endif
 
 
 
