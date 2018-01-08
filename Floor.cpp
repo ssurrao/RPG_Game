@@ -7,6 +7,7 @@ using namespace std;
 Floor::Floor(const int height, const int width, ifstream& file): height(height), width(width), floor(new Cell*[height]) {
     
     for(int i = 0; i < height; ++i) {
+        //This 2D array is not working, wont initialize a Array but instead thinks we are trying to initialize class
         floor[i] = new Cell[width];
     }
     char tile;
@@ -16,7 +17,10 @@ Floor::Floor(const int height, const int width, ifstream& file): height(height),
             //not a pointer
             floor[z][s] = Cell();
             floor[z][s].setOriginalFloor(tile);
-
+            //Add pointer Condition when entity pointer is added to cell
+            if (floor[z][s].getOriginalFloor() == '.'){
+                spawnPointsVector.push_back(new SpawnPoints(s,z));
+            }
         }
     }
 }

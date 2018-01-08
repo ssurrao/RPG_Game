@@ -1,19 +1,28 @@
-//
-// Created by Marcus Thian on 2018-01-06.
-//
+#ifndef ENTITY_H
+#define ENTITY_H
 
-#ifndef RPG_GAME_ENTITY_H
-#define RPG_GAME_ENTITY_H
+class Entity {
+	
+
+
+public:
+
 
 
 
 //Abstract class
 class Entity {
 
+
+
 };
 
 
 
 
+#endif
+
+
 
 #endif //RPG_GAME_ENTITY_H
+
