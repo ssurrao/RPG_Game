@@ -11,13 +11,13 @@
 
 class Enemy : public Entity {
     // Enemy row and column position
-    int row;
-    int column;
+    int row = 5;
+    int column = 7;
     //PLayer character row and column position
     int playerRow;
     int playerColumn;
     //Pointer to Player Character
-    Player *pc;
+    class Player *pc;
 
 public:
     //Sets the new location of the Enemy
@@ -32,6 +32,7 @@ public:
     void setPlayerLocation(int row, int column);
     //Whenever player moves. PLayer Characters new position is updated
     void update();
+   // ~Enemy();
 
 
 };

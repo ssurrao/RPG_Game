@@ -9,9 +9,7 @@
 
 //Abstract class
 class Entity {
-public:
-    virtual ~Entity();
-	
+
 };
 
 

@@ -44,5 +44,7 @@ void Enemy::update() {
     setPlayerLocation(getPlayer()->getRow(), getPlayer()->getColumn());
 }
 
-
+//Enemy::~Enemy() {
+  //  delete this;
+//}
 

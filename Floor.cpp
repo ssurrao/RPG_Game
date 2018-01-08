@@ -24,9 +24,18 @@ Floor::Floor(const int height, const int width, ifstream& file): height(height),
 void Floor::printBoard() {
     for(int z = 0; z < height; ++z) {
         for(int k = 0; k < width; ++k) {
-            //cout << k << endl;
-            cout << floor[z][k].getOriginalFloor();
+            if(floor[z][k].getEntity() == nullptr) {
+                cout << floor[z][k].getOriginalFloor();
+            } else {
+                cout << '@';
+            }
         }
 
     }
 }
+
+void Floor::setEntity(int row, int column, Entity* ent) {
+    floor[row][column].setEntity(ent);
+}
+
+

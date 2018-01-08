@@ -12,10 +12,10 @@
 
 class Player : public Entity {
     //Player row and column position
-    int row;
-    int column;
+    int row = 3;
+    int column = 7;
     //Vector of pointers to all Enemies
-    vector < Enemy * > enemyList;
+    std::vector < class Enemy * > enemyList;
 public:
     //Attaches a new enemy onto the enemy list
     void attach(Enemy * enemy);
@@ -26,6 +26,8 @@ public:
     int getColumn();
     //Whenever Player character moves. All enemies in enemyList are notified of the new coordinates
     void notify();
+   // ~Player();
+
 
 
 

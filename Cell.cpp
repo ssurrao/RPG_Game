@@ -10,3 +10,11 @@ char Cell::getOriginalFloor() {
 void Cell::setOriginalFloor(char tile) {
 	originalFloor = tile;
 }
+
+void Cell::setEntity(Entity *ent) {
+    this->entity = ent;
+}
+
+Entity* Cell::getEntity() {
+    return this->entity;
+}
