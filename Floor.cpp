@@ -7,6 +7,7 @@ using namespace std;
 Floor::Floor(const int height, const int width, ifstream& file): height(height), width(width), floor(new Cell*[height]) {
     
     for(int i = 0; i < height; ++i) {
+        //This 2D array is not working, wont initialize a Array but instead thinks we are trying to initialize class
         floor[i] = new Cell[width];
     }
     char tile;
