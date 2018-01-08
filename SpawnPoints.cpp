@@ -1,4 +1,6 @@
-//
-// Created by Marcus Thian on 2018-01-07.
-//
-
+#include "SpawnPoints.h"
+SpawnPoints::SpawnPoints() {}
+SpawnPoints::SpawnPoints(int x, int y) {
+    this->xCor = x;
+    this->yCor = y;
+}
