@@ -54,6 +54,7 @@ void Player::updateNeighbours() {
     }
 }
 
+
 void Player::setFloor(Floor *floor) {
     this->floor = floor;
 }
