@@ -1,19 +1,19 @@
 #ifndef FLOOR_H
 #define FLOOR_H
 
-
-#include <fstream>
 #include <iostream>
+#include <fstream>
 #include <vector>
-#include "Cell.h"
 #include "SpawnPoints.h"
-#include "Player.h"
+#include "Entity.h"
+
+
 
 
 class Player;
+class Enemy;
 class Cell;
-
- class Floor {
+class Floor {
      const int height;
      const int width;
      Cell **floor;

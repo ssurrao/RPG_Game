@@ -23,10 +23,10 @@ void Player::attach(Enemy *enemy) {
     enemyList.push_back(enemy);
 }
 
-void Player::notify() {
+/*void Player::notify() {
     for (int i = 0; i < enemyList.size(); ++i)
         enemyList[i]->update();
-}
+}*/
 
 bool Player::moveTo(Cell *cell) {
     if(cell->getEntity() == nullptr && cell->getOriginalFloor() != '-' && cell->getOriginalFloor() != '|') {
@@ -36,8 +36,22 @@ bool Player::moveTo(Cell *cell) {
         this->column = cell->getColumn();
         this->currentCell = cell;
         this->updateNeighbours();
+        return true;
+    } else {
+        return false;
     }
 
+}
+
+void Player::updateNeighbours() {
+    this->neighbours.clear();
+    for(int i = this->row - 1; i <= this->row + 1; ++i) {
+        for(int y = this->column - 1; y <= this->column + 1; ++y ) {
+            if (y != this->column && i != this->row) {
+                this->neighbours.push_back(this->floor->getCell(i,y));
+            }
+        }
+    }
 }
 
 //Player::~Player() {
