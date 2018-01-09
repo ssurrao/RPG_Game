@@ -15,8 +15,11 @@ class Player : public Entity {
     //std::vector<Cell*> neighbours;
     //Vector of pointers to all Enemies
     std::vector < Enemy * > enemyList;
+    //Current cell the player is in
     Cell* currentCell = nullptr;
+    //the floor the player is on
     Floor* floor;
+    //8 surrounding spaces
     std::vector<Cell*> neighbours;
 public:
 
@@ -27,15 +30,18 @@ public:
     //Getters
     int getRow();
     int getColumn();
-    //Whenever Player character moves. All enemies in enemyList are notified of the new coordinates
-    //void notify();
+  //Move Cells
     bool moveTo(Cell* cell);
+    //Updates neighbours vector with new cells
     void updateNeighbours();
+    //Sets the floor player is on.
     void setFloor(Floor* floor);
+    //Sets the current cell the player is in
     void setCell(Cell *cell);
+    //destructor
     ~Player();
 
-   // ~Player();
+
 
 
 

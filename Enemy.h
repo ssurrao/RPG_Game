@@ -13,9 +13,11 @@ class Cell;
 class Enemy : public Entity {
     int row;
     int column;
+    //neighbour cells
     std::vector<Cell*> neighbours;
     //Pointer to Player Character
     Player *pc;
+    //current floor
     Floor *floor;
 public:
     //Sets the new location of the Enemy
@@ -24,7 +26,9 @@ public:
     Player* getPlayer();
     int getRow();
     int getColumn();
+    //TODO determines is player is in attack range
     bool inRange();
+    //TODO movement
     bool moveTo(Cell* cell);
     //int getPlayerRow();
     //int getPlayerColumn();
