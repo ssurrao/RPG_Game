@@ -21,6 +21,7 @@ public:
     int getColumn();
     void setRow(int val);
     void setColumn(int val);
+
 };
 
 #endif

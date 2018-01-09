@@ -19,7 +19,7 @@ Floor::Floor(const int height, const int width, ifstream& file): height(height),
             floor[z][s] = Cell();
             floor[z][s].setOriginalFloor(tile);
             floor[z][s].setRow(z);
-            floor[z][s].setRow(s);
+            floor[z][s].setColumn(s);
             //Add pointer Condition when entity pointer is added to cell
             if (floor[z][s].getOriginalFloor() == '.'){
                 spawnPointsVector.push_back(new SpawnPoints(s,z));
@@ -34,6 +34,7 @@ void Floor::printBoard() {
             if(floor[z][k].getEntity() == nullptr) {
                 cout << floor[z][k].getOriginalFloor();
             } else {
+                //for testing
                 cout << '@';
             }
         }

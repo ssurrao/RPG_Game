@@ -13,6 +13,7 @@
 class Player;
 class Enemy;
 class Cell;
+class Entity;
 class Floor {
      const int height;
      const int width;

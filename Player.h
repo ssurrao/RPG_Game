@@ -10,14 +10,16 @@
 #include "Enemy.h"
 //class Cell;
 class Player : public Entity {
-    int row;
-    int column;
-    std::vector<Cell*> neighbours;
+    int row = 5;
+    int column = 5;
+    //std::vector<Cell*> neighbours;
     //Vector of pointers to all Enemies
     std::vector < Enemy * > enemyList;
     Cell* currentCell = nullptr;
     Floor* floor;
+    std::vector<Cell*> neighbours;
 public:
+
     //Attaches a new enemy onto the enemy list
     void attach(Enemy * enemy);
     //Sets new player location
@@ -29,6 +31,9 @@ public:
     //void notify();
     bool moveTo(Cell* cell);
     void updateNeighbours();
+    void setFloor(Floor* floor);
+    void setCell(Cell *cell);
+    ~Player();
 
    // ~Player();
 

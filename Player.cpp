@@ -54,6 +54,14 @@ void Player::updateNeighbours() {
     }
 }
 
-//Player::~Player() {
-//    delete this;
-//}
+void Player::setFloor(Floor *floor) {
+    this->floor = floor;
+}
+
+void Player::setCell(Cell *cell) {
+    this->currentCell = cell;
+}
+
+Player::~Player() {
+    delete this;
+}
